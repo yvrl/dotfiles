@@ -1,8 +1,8 @@
 ## ncmpcpp config file
 
 
-mpd_host = localhost
+mpd_host = localhost 
 mpd_port = 6600
-mpd_music_dir = /home/cm/ssd/toate
+mpd_music_dir = /home/cm/music/toate
 allow_for_physical_item_deletion = no
 song_columns_list_format = "$L(90)[white]{f} $R(9)[cyan]{l}

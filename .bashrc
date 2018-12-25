@@ -17,7 +17,10 @@ alias xr="sudo xbps-remove"
 # Highlight grep search
 
 alias grep="grep --color=auto" 
-
+alias diff="diff --color=auto"
 
 
 # make alias for youtube dl with all the options
+# download audio
+alias yta="youtube-dl --extract-audio --audio-format best"
+alias ytv="youtube-dl -f best"

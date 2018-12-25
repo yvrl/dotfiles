@@ -1,0 +1,3 @@
+# General settings
+--no-cache-dir
+-o "/home/cm/Downloads/%(title)s.%(ext)s"
