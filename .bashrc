@@ -15,12 +15,19 @@ alias xr="sudo xbps-remove"
 
 
 # Highlight grep search
-
 alias grep="grep --color=auto" 
 alias diff="diff --color=auto"
 
 
-# make alias for youtube dl with all the options
+# Download with youtube-dl
 # download audio
 alias yta="youtube-dl --extract-audio --audio-format best"
+# download video
 alias ytv="youtube-dl -f best"
+
+# Git
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
+alias gb="git branch"
+alias gpo="git push origin"

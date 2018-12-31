@@ -1,0 +1,5 @@
+UUID=99476ac2-ab07-4ad2-9bef-d4cce1bfa9dc / ext4 defaults,noatime,discard 0 1
+UUID=9d55c994-12db-443e-8a70-fd060be4ec93 none swap sw 0 0
+UUID=f6430ab6-800c-4b05-a581-2cf4748d0663 /home/cm/ssd1 ext4 defaults,noatime,discard,nofail 0 2
+UUID=1a7a66e7-dad2-4cb2-ade3-074c7d21a713 /home/cm/ssd2 ext4 defaults,noatime,discard,nofail 0 2 
+tmpfs /tmp tmpfs defaults,nosuid,nodev 0 0
