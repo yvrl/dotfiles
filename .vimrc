@@ -9,6 +9,11 @@
 	set nocompatible
 	set textwidth=80
 
+" Copy to system clipboard
+	vnoremap <C-c> "+y
+	map <C-p> "+P
+
+
 " Disable automatic commenting on a newline
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 

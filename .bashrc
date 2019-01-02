@@ -14,10 +14,10 @@ alias xq="sudo xbps-query"
 alias xr="sudo xbps-remove"
 
 
-# Highlight grep search
+# Add some colors
 alias grep="grep --color=auto" 
 alias diff="diff --color=auto"
-
+alias ccat="highlight --out-format=ansi" 
 
 # Download with youtube-dl
 # download audio
