@@ -2,13 +2,16 @@
 	set number
 	syntax on
 	filetype on
+	filetype plugin on
 	filetype plugin indent on
 	set encoding=utf-8
 	set fileencoding=utf-8
-	filetype plugin on
 	set nocompatible
 	set textwidth=80
-
+	set ignorecase
+"	set smartcase
+	set lazyredraw
+	set undolevels=50
 " Copy to system clipboard
 	vnoremap <C-c> "+y
 	map <C-p> "+P
@@ -67,3 +70,8 @@ function! ClangCheck()
 endfunction
 
 nmap <silent> <F5> :call ClangCheck()<CR><CR>
+
+
+" vim-clang-format 
+autocmd FileType c,cpp,objc nnoremap <buffer> <F3> :ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer> <F4> :ClangFormat<CR>
