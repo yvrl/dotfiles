@@ -7,7 +7,7 @@
 	set encoding=utf-8
 	set fileencoding=utf-8
 	set nocompatible
-	set textwidth=80
+"	set textwidth=80
 	set ignorecase
 "	set smartcase
 	set lazyredraw
@@ -73,5 +73,13 @@ nmap <silent> <F5> :call ClangCheck()<CR><CR>
 
 
 " vim-clang-format 
+"let g:clang_format#code_style='llvm'
 autocmd FileType c,cpp,objc nnoremap <buffer> <F3> :ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer> <F4> :ClangFormat<CR>
+
+" ale
+"let b:ale_linters = ['clangtidy', 'cppcheck']
+"let g:ale_linters_explicit = 1
+let g:airline#extensions#ale#enabled = 1
+let g:ale_lint_on_text_changed = 'always'
+let b:ale_cpp_clangtidy_checks = ['cppcoreguidelines', 'clang-analyzer', 'performance', 'bugprone', 'llvm']
