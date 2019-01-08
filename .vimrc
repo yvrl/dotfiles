@@ -80,6 +80,18 @@ autocmd FileType c,cpp,objc vnoremap <buffer> <F4> :ClangFormat<CR>
 " ale
 "let b:ale_linters = ['clangtidy', 'cppcheck']
 "let g:ale_linters_explicit = 1
+
 let g:airline#extensions#ale#enabled = 1
-let g:ale_lint_on_text_changed = 'always'
 let b:ale_cpp_clangtidy_checks = ['cppcoreguidelines', 'clang-analyzer', 'performance', 'bugprone', 'llvm']
+
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
+
+" disabled all automatic checking
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_insert_leave = 0
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 0
+let g:ale_lint_on_filetype_changed = 0
+
+nmap <silent> <F6> :ALELint<CR>
