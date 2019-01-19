@@ -188,7 +188,7 @@ bindsym $mod+o  exec $next
 bindsym $mod+r		exec $term -e ranger
 bindsym $mod+Escape	workspace prev
 bindsym $mod+c		exec --no-startup-id firefox
-#bindsym $mod+t		exec --no-startup-id /home/cm/tor-browser_en-US/start-tor-browser.desktop
+bindsym $mod+t		exec --no-startup-id /home/cm/Downloads/tor-browser_en-US/Browser/start-tor-browser
 # print the screens
 bindsym Print		exec --no-startup-id scrot -z -e 'mv $f ~/screenshots/'
 bindsym Shift+Print	exec --no-startup-id scrot -u -z -e 'mv $f ~/screenshots/'
