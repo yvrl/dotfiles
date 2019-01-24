@@ -5,6 +5,7 @@
 
 *background: #000000
 !!*background: rgba(0, 0, .7)
+
 !!black
 !normal scheme
 !*color0: #073642
@@ -12,6 +13,7 @@
 !gruvbox
 *.color0: #1d2021
 *.color8: #928374
+
 !!red
 !normal scheme
 !*color1: #dc322f
@@ -19,6 +21,7 @@
 !gruvbox
 *.color1: #cc241d
 *.color9: #fb4934
+
 !!green
 !normal scheme
 !*color2:  #859900
@@ -26,6 +29,7 @@
 !gruvbox
 *.color2: #98971a
 *.color10: #b8bb26
+
 !!yellow
 !normal scheme
 !*color3:  #b58900
@@ -33,6 +37,7 @@
 !gruvbox
 *.color3: #d79921
 *.color11: #fabd2f
+
 !!blue
 !normal scheme
 !*color4:  #268bd2
@@ -40,6 +45,7 @@
 !gruvbox
 *.color4: #458588
 *.color12: #83a598
+
 !!magenta
 !normal scheme
 !*color5:  #d33682 
@@ -47,6 +53,7 @@
 !gruvbox
 *.color5: #b16286
 *.color13: #d3869b
+
 !!cyan
 !normal scheme
 !*color6:  #2aa198
@@ -54,6 +61,7 @@
 !gruvbox
 *.color6: #689d6a
 *.color14: #8ec07c
+
 !!white
 !normal scheme
 !*color7:  #eee8d5
@@ -63,15 +71,12 @@
 *.color15: #ebdbb2
 
 
-URxvt.intensityStyles: 	false
-URxvt.background:	#000000
-URxvt.depth: 	  	32
-URvt.cursorColor:	white
-URxvt.font:		 xft:DejaVuSansMono:size=10
-URxvt.scrollBar:	 false
+! URxvt is no longer in use. 
 
-!! not needed
-!! Transparency (0-255):
-!!1*.alpha: 230
-!! Set a default font and font size as below:
-!! *.font: Monospace-14;
+!URxvt.intensityStyles: 	false
+!URxvt.background:	#000000
+!URxvt.depth: 	  	32
+!URvt.cursorColor:	white
+!URxvt.font:		 xft:DejaVuSansMono:size=10
+!URxvt.scrollBar:	 false
+
