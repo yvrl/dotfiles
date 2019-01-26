@@ -8,7 +8,7 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-set $term alacritty
+set $term kitty
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -198,11 +198,11 @@ bindsym Shift+Print	exec --no-startup-id scrot -u -z -e 'mv $f ~/screenshots/'
 #Assign rotate-screen.sh to XF86RotateWindows button located on the display of the x230t.
 #bindsym XF86TaskPane exec --no-startup-id /home/cm/.config/rotate-screen.sh 
 
-# Alacritty-colorscheme changer 
+# Alacritty-colorscheme changer - no longer in use 
 # Set program location
-set $alacritty_colorscheme ~/.bin/alacritty-colorscheme
+# set $alacritty_colorscheme ~/.bin/alacritty-colorscheme
 # Toggle between all available colorscheme
-bindsym $mod+Shift+m exec $alacritty_colorscheme -T
+# bindsym $mod+Shift+m exec $alacritty_colorscheme -T
 
 
 

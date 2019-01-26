@@ -39,38 +39,10 @@
 	let g:airline_theme='monochrome'
 	"let g:airline_theme='wal'
 
+	
 " nerdtree
 	map <C-n> :NERDTreeToggle<CR>
 	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" Clang static analysis tool
-
-function! ClangCheckImpl(cmd)
-  if &autowrite | wall | endif
-  echo "Running " . a:cmd . " ..."
-  let l:output = system(a:cmd)
-  cexpr l:output
-  cwindow
-  let w:quickfix_title = a:cmd
-  if v:shell_error != 0
-    cc
-  endif
-  let g:clang_check_last_cmd = a:cmd
-endfunction
-
-function! ClangCheck()
-  let l:filename = expand('%')
-  if l:filename =~ '\.\(cpp\|cxx\|cc\|c\)$'
-    call ClangCheckImpl("clang-check " . l:filename)
-  elseif exists("g:clang_check_last_cmd")
-    call ClangCheckImpl(g:clang_check_last_cmd)
-  else
-    echo "Can't detect file's compilation arguments and no previous clang-check invocation!"
-  endif
-endfunction
-
-nmap <silent> <F5> :call ClangCheck()<CR><CR>
-
 
 " vim-clang-format 
 "let g:clang_format#code_style='llvm'
@@ -80,24 +52,22 @@ autocmd FileType c,cpp,objc vnoremap <buffer> <F4> :ClangFormat<CR>
 " ale
 "let b:ale_linters = ['clangtidy', 'cppcheck']
 "let g:ale_linters_explicit = 1
-
 let g:airline#extensions#ale#enabled = 1
 let b:ale_cpp_clangtidy_checks = ['cppcoreguidelines', 'clang-analyzer', 'performance', 'bugprone', 'llvm']
-
 highlight clear ALEErrorSign
 highlight clear ALEWarningSign
-
 " disabled all automatic checking
 let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_insert_leave = 0
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_save = 0
 let g:ale_lint_on_filetype_changed = 0
+nmap <silent> <F5> :ALELint<CR>
 
-nmap <silent> <F6> :ALELint<CR>
-
-
-" settings added after started using nvim instead of vim
-" colorscheme
-" colorscheme onedark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1 
+
+" set true colors
+" set termguicolors 
+" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum" 
+" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
