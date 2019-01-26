@@ -1,4 +1,10 @@
 
+st.termname: st-256color
+st.font: DejaVuSansMono:pixelsize=16:antialias=true:autohint=true;
+st.xfps: 120
+st.actionfps: 30
+st.mouseScrollLines: 3
+
 *foreground: #ffffff
 *foreground_bold: #a8a19f
 *cursor: #a8a19f
