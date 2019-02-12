@@ -8,7 +8,7 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-set $term kitty
+set $term st
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -174,7 +174,7 @@ new_window pixel 2
 
 # music shortcuts
 exec		--no-startup-id mpd
-set $music 	--no-startup-id urxvt -e ncmpcpp
+set $music 	--no-startup-id st -e ncmpcpp
 set $pause	--no-startup-id mpc toggle
 set $next	--no-startup-id mpc next
 set $prev 	--no-startup-id mpc prev

@@ -1,4 +1,5 @@
 " General settings
+"	let mapleader = ";"
 	set number
 	syntax on
 	filetype on
@@ -12,9 +13,10 @@
 "	set smartcase
 	set lazyredraw
 	set undolevels=50
+	set hlsearch
 " Copy to system clipboard
 	vnoremap <C-c> "+y
-	map <C-p> "+P
+	"map <C-p> "+P
 
 
 " Disable automatic commenting on a newline
@@ -46,8 +48,8 @@
 
 " vim-clang-format 
 "let g:clang_format#code_style='llvm'
-autocmd FileType c,cpp,objc nnoremap <buffer> <F3> :ClangFormat<CR>
-autocmd FileType c,cpp,objc vnoremap <buffer> <F4> :ClangFormat<CR>
+autocmd FileType c,cpp,objc nnoremap <buffer> <F6> :ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer> <F7> :ClangFormat<CR>
 
 " ale
 "let b:ale_linters = ['clangtidy', 'cppcheck']
@@ -71,3 +73,6 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 " let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum" 
 " let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
+" deoplete
+
+let g:deoplete#enable_at_startup = 1
