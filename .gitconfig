@@ -2,4 +2,4 @@
 	name = yvrl
 	email = 45044782+yvrl@users.noreply.github.com
 [core]
-	editor = nvim
+	editor = vim
