@@ -21,7 +21,7 @@ alias ccat="highlight --out-format=ansi"
 
 # Download with youtube-dl
 # download audio
-alias yta="youtube-dl --extract-audio --audio-format best"
+alias yta="youtube-dl --extract-audio --audio-format mp3"
 # download video
 alias ytv="youtube-dl -f best"
 
@@ -31,3 +31,9 @@ alias ga="git add"
 alias gc="git commit"
 alias gb="git branch"
 alias gpo="git push origin"
+
+# GCC
+alias gcc="gcc -Wall -Wextra -Werror -Wpedantic"
+alias clang="clang -Wall -Wextra -Werror -Wpedantic"
+alias clang++="clang++ -Wall -Wextra -Werror -Wpendantic"
+alias g++="g++ -Wall -Wextra -Werror -Wpedantic"
