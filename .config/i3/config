@@ -75,7 +75,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+#bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -170,7 +170,7 @@ bar {
 #hide_edge_borders vertical
 #hide_edge_borders both
 #border style
-new_window pixel 2
+new_window pixel 1
 
 # music shortcuts
 exec		--no-startup-id mpd
@@ -179,25 +179,26 @@ set $next	--no-startup-id mpc next
 set $prev 	--no-startup-id mpc prev
 
 bindsym $mod+m  exec $term -e ncmpcpp
-bindsym $mod+p 	exec $pause
-bindsym $mod+i 	exec $prev
-bindsym $mod+o  exec $next
+bindsym $mod+x 	exec $pause
+bindsym $mod+z 	exec $prev
+bindsym $mod+c  exec $next
 
 # other bindings 
 bindsym $mod+r		exec $term -e ranger
 bindsym $mod+Escape	workspace prev
-bindsym $mod+c		exec --no-startup-id firefox
+bindsym $mod+f		exec --no-startup-id firefox
 bindsym $mod+t		exec --no-startup-id /home/cm/Downloads/tor-browser_en-US/Browser/start-tor-browser
 # print the screens
 bindsym Print		exec --no-startup-id scrot -z -e 'mv $f ~/screenshots/'
 bindsym Shift+Print	exec --no-startup-id scrot -u -z -e 'mv $f ~/screenshots/'
 
+# no longer used
 #exec		--no-startup-id redshift
 
 #Assign rotate-screen.sh to XF86RotateWindows button located on the display of the x230t.
 #bindsym XF86TaskPane exec --no-startup-id /home/cm/.config/rotate-screen.sh 
 
-# Alacritty-colorscheme changer - no longer in use 
+# Alacritty-colorscheme changer  
 # Set program location
 # set $alacritty_colorscheme ~/.bin/alacritty-colorscheme
 # Toggle between all available colorscheme
