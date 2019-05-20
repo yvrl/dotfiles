@@ -1,6 +1,7 @@
 " General settings
 "	let mapleader = ";"
-	set number
+	set number relativenumber
+	syntax enable
 	syntax on
 	filetype on
 	filetype plugin on
@@ -8,14 +9,27 @@
 	set encoding=utf-8
 	set fileencoding=utf-8
 	set nocompatible
+	set showcmd
 	set ignorecase
+	set ttyfast
+"	set undofile
+	"set linebreak
 	set lazyredraw
-	set undolevels=50
+	set undolevels=200
 	set hlsearch
+	set incsearch
 " Copy to system clipboard
 	vnoremap <C-c> "+y
 	map <C-p> "+P
 	set t_Co=256
+	set wildmenu
+
+" Automatic switch for line numbers between relative and absolute
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
 
 " Disable automatic commenting on a newline
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
