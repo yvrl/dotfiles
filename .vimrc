@@ -1,3 +1,14 @@
+" Plugin list
+ " ale
+ " colorizer
+ " indentline
+ " nerdtree
+ " vim-airline
+ " vim-airline-theme
+ " vim-clang-format
+ " vim-cpp-enhanced-highlight
+ " vim-gitgutter
+
 " General settings
 "	let mapleader = ";"
 	set number relativenumber
