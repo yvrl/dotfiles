@@ -33,7 +33,7 @@ alias gb="git branch"
 alias gpo="git push origin"
 
 # GCC
-alias gcc="gcc -Wall -Wextra -Werror -Wpedantic"
-alias clang="clang -Wall -Wextra -Werror -Wpedantic"
-alias clang++="clang++ -Wall -Wextra -Werror -Wpendantic"
-alias g++="g++ -Wall -Wextra -Werror -Wpedantic"
+#alias gcc="gcc -Wall -Wextra -Werror -Wpedantic"
+#alias clang="clang -Wall -Wextra -Werror -Wpedantic"
+#alias clang++="clang++ -Wall -Wextra -Werror -Wpendantic"
+#alias g++="g++ -Wall -Wextra -Werror -Wpedantic"
