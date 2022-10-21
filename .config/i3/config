@@ -170,10 +170,10 @@ bar {
 #hide_edge_borders vertical
 #hide_edge_borders both
 #border style
-new_window pixel 1
+new_window pixel 2
 
 # music shortcuts
-exec		--no-startup-id mpd
+#exec		--no-startup-id mpd
 set $pause	--no-startup-id mpc toggle
 set $next	--no-startup-id mpc next
 set $prev 	--no-startup-id mpc prev
@@ -187,7 +187,7 @@ bindsym $mod+c  exec $next
 bindsym $mod+r		exec $term -e ranger
 bindsym $mod+Escape	workspace prev
 bindsym $mod+f		exec --no-startup-id firefox
-bindsym $mod+t		exec --no-startup-id /home/cm/Downloads/tor-browser_en-US/Browser/start-tor-browser
+bindsym $mod+t		exec --no-startup-id /home/cm/Downloads/_dl/tor-browser_en-US/Browser/start-tor-browser
 # print the screens
 bindsym Print		exec --no-startup-id scrot -z -e 'mv $f ~/screenshots/'
 bindsym Shift+Print	exec --no-startup-id scrot -u -z -e 'mv $f ~/screenshots/'
@@ -195,16 +195,11 @@ bindsym $mod+i 		exec --no-startup-id /home/cm/inteliji/idea-IC-192.6817.14/bin/
 bindsym $mod+Shift+f    exec --no-startup-id chromium
 #exec		--no-startup-id redshift
 
-bindsym $mod+Shift+plus exec xbacklight -inc 10
-bindsym $mod+Shift+minus exec xbacklight -dec 10
+bindsym $mod+plus exec xbacklight -inc 10
+bindsym $mod+minus exec xbacklight -dec 10
 #Assign rotate-screen.sh to XF86RotateWindows button located on the display of the x230t.
-bindsym XF86TaskPane exec --no-startup-id /home/cm/.config/scripts/rotate-screen.sh 
+#bindsym XF86TaskPane exec --no-startup-id /home/cm/.config/scripts/rotate-screen.sh 
 
-# Alacritty-colorscheme changer  
-# Set program location
-# set $alacritty_colorscheme ~/.bin/alacritty-colorscheme
-# Toggle between all available colorscheme
-# bindsym $mod+Shift+m exec $alacritty_colorscheme -T
-
-
+bindsym $mod+Shift+m 	exec --no-startup-id ~/.config/scripts/vga1080.sh
+bindsym $mod+Shift+n 	exec --no-startup-id ~/.config/scripts/novga.sh
 
